@@ -7,16 +7,16 @@
 //
 
 import UIKit
+import SwiftUI
 
 var humans = [Int]()
-var graph = [Human]()
+var humansLast = [Int]()
 var human = Int()
 var newGeneration = Int()
 var oldGeneration = Int()
 var adultPeople = Int()
 
 class ViewController: UIViewController {
-    @IBOutlet weak var lastGenerationTextField: UITextField!
     @IBOutlet weak var numberChildTextField: UITextField!
     @IBOutlet weak var firstPopulationTextField: UITextField!
     @IBOutlet weak var calculateButton: UIButton!
@@ -27,15 +27,15 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    func start(lastGeneration: Int, number numberChild: Int, population: Int) {
-        for i in 1...lastGeneration {
+    func start(number numberChild: Int, population: Int) {
+        for i in 1...9 {
             if i == 1 {
                 adultPeople = (population * 3) / 10
                 newGeneration = adultPeople / 2 * numberChild
                 human = newGeneration + adultPeople
                 
-                graph.append(Human(number: human, generation: i))
                 humans.append(human)
+                humansLast.append(human)
             }
             
             print("\(humans.last!) in \(i). generation")
@@ -43,22 +43,34 @@ class ViewController: UIViewController {
             oldGeneration = newGeneration
             newGeneration = newGeneration / 2 * numberChild
             human = oldGeneration + newGeneration
+            
             humans.append(human)
+            humansLast.append(human)
             
             if i >= 2 {
                 humans.remove(at: 0)
             }
         }
+        
+        print(humansLast)
     }
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
-        if lastGenerationTextField.text == nil && numberChildTextField.text == nil && firstPopulationTextField.text == nil {
+        if numberChildTextField.text == nil && firstPopulationTextField.text == nil {
             let alert = UIAlertController(title: "Alert", message: "Please, fill in all sections!", preferredStyle: .alert)
             let action = UIAlertAction(title: "Ok", style: .default)
             alert.addAction(action)
             self.present(alert, animated: true)
         } else {
-            start(lastGeneration: Int(lastGenerationTextField.text!)!, number: Int(numberChildTextField.text!)!, population: Int(firstPopulationTextField.text!)!)
+            humans.removeAll()
+            humansLast.removeAll()
+            
+            start(number: Int(numberChildTextField.text!)!, population: Int(firstPopulationTextField.text!)!)
+            performSegue(withIdentifier: "toView", sender: nil)
         }
+    }
+    
+    @IBSegueAction func action(_ coder: NSCoder, sender: Any?) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: AnalyzesView())
     }
 }

@@ -6,9 +6,9 @@
 //  Copyright © 2019 Can Balkaya. All rights reserved.
 //
 
-import Foundation
-
-struct Human {
-    var number: Int
-    var generation: Int
-}
+//import Foundation
+//
+//struct Human {
+//    var number: Int
+//    var generation: Int
+//}
