@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         toolBar.barTintColor = .black
         toolBar.tintColor = .white
 
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ViewController.dismissKeyboard))
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(ViewController.dismissKeyboard))
 
         toolBar.setItems([doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true

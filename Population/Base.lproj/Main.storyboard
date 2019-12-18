@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Child per family" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEr-ba-gpP">
-                                <rect key="frame" x="82" y="250" width="250" height="34"/>
+                                <rect key="frame" x="82" y="138" width="250" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="7XJ-IH-f24"/>
                                     <constraint firstAttribute="height" constant="34" id="aus-CL-JyD"/>
@@ -25,7 +25,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First population" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-ih-Ryo">
-                                <rect key="frame" x="82" y="292" width="250" height="34"/>
+                                <rect key="frame" x="82" y="180" width="250" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="c3X-se-nPV"/>
                                     <constraint firstAttribute="width" constant="250" id="urZ-AE-ayz"/>
@@ -34,7 +34,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPr-Zs-jPF">
-                                <rect key="frame" x="140" y="334" width="134" height="36"/>
+                                <rect key="frame" x="140" y="222" width="134" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
@@ -45,7 +45,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="CPr-Zs-jPF" firstAttribute="top" secondItem="MRn-ih-Ryo" secondAttribute="bottom" constant="8" id="2ng-en-2ij"/>
-                            <constraint firstItem="IEr-ba-gpP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="162" id="8Wv-5Y-ScN"/>
+                            <constraint firstItem="IEr-ba-gpP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="8Wv-5Y-ScN"/>
                             <constraint firstItem="MRn-ih-Ryo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="FkU-gI-3IT"/>
                             <constraint firstItem="CPr-Zs-jPF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="Jun-wm-V6J"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CPr-Zs-jPF" secondAttribute="trailing" constant="140" id="UVT-vo-mlC"/>
@@ -77,57 +77,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTB-ig-jis" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1662" y="113"/>
-        </scene>
-        <!--Graph-->
-        <scene sceneID="zfX-HQ-cO0">
-            <objects>
-                <viewController id="xzY-LP-sHm" customClass="AnalyzesVC" customModule="Population" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0Ei-CJ-EqE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnE-JY-Xri" customClass="View" customModule="Population" customModuleProvider="target">
-                                <rect key="frame" x="20" y="52" width="374" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="R9Y-Pq-p6d"/>
-                                    <constraint firstAttribute="width" constant="374" id="lQE-2e-ksK"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LLG-RB-NV9">
-                                <rect key="frame" x="20" y="360" width="374" height="502"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="I6b-ec-xci">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I6b-ec-xci" id="9AY-1C-7jD">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="LLG-RB-NV9" firstAttribute="leading" secondItem="mah-it-mll" secondAttribute="leading" constant="20" id="5bT-Bt-f3y"/>
-                            <constraint firstItem="mah-it-mll" firstAttribute="trailing" secondItem="LLG-RB-NV9" secondAttribute="trailing" constant="20" id="Hvy-bZ-g6w"/>
-                            <constraint firstItem="mah-it-mll" firstAttribute="trailing" secondItem="hnE-JY-Xri" secondAttribute="trailing" constant="20" id="NRM-Ys-2YJ"/>
-                            <constraint firstItem="LLG-RB-NV9" firstAttribute="bottom" secondItem="mah-it-mll" secondAttribute="bottom" id="QYm-Hv-j5l"/>
-                            <constraint firstItem="LLG-RB-NV9" firstAttribute="top" secondItem="hnE-JY-Xri" secondAttribute="bottom" constant="8" id="TGw-xm-sgm"/>
-                            <constraint firstItem="hnE-JY-Xri" firstAttribute="top" secondItem="mah-it-mll" secondAttribute="top" constant="8" id="XI4-TO-JPD"/>
-                            <constraint firstItem="hnE-JY-Xri" firstAttribute="leading" secondItem="mah-it-mll" secondAttribute="leading" constant="20" id="jEi-bc-sRP"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="mah-it-mll"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Graph" largeTitleDisplayMode="always" id="qUB-7j-BNv"/>
-                    <connections>
-                        <outlet property="graphView" destination="hnE-JY-Xri" id="nmC-54-Fir"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GUq-1P-JL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1793" y="877"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lpe-fL-Ph7">

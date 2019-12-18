@@ -11,16 +11,16 @@ import SwiftUI
 struct AnalyzesView: View {
     var body: some View {
         VStack {
-            HStack {
+            Spacer().frame(height: 5)
+            
+            HStack (alignment: .top) {
                 VStack (alignment: .trailing, spacing: UIScreen.main.bounds.height * 0.12) {
-                    Spacer().frame(height: 1)
                     Text(String(humansLast.max()!)).font(.system(size: 8))
                     Text(String((humansLast.max()! + humansLast.min()!)/2)).font(.system(size: 8))
-                    Text(String(humansLast.min()!)).font(.system(size: 8)).padding(.bottom, 20)
-                    Spacer().frame(height: 4)
-                }.frame(height: UIScreen.main.bounds.height * 0.3)
+                    Text(String(humansLast.min()!)).font(.system(size: 8))
+                }.frame(height: UIScreen.main.bounds.height * 0.3).padding(.top, 5)
                 
-                HStack (spacing: 12) {
+                HStack (spacing: 8) {
                     ForEach (0...humansLast.count - 1, id: \.self) { humanLast in
                         BarView(value: humansLast[humanLast], currentGeneration: humanLast + 1)
                     }
