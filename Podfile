@@ -6,6 +6,5 @@ target 'Population' do
   use_frameworks!
 
   # Pods for Population
-pod "Macaw", "0.9.5"
 
 end

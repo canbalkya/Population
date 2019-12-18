@@ -25,6 +25,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        toolBar.barTintColor = .black
+        toolBar.tintColor = .white
+
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ViewController.dismissKeyboard))
+
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+
+        numberChildTextField?.inputAccessoryView = toolBar
+        firstPopulationTextField?.inputAccessoryView = toolBar
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func start(number numberChild: Int, population: Int) {

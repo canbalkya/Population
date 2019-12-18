@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1120"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0256EB74CA224869A20B58E2B3936550"
+               BlueprintIdentifier = "69F6F72845FC420025193C2BB7981E5C"
                BuildableName = "Pods_Population.framework"
                BlueprintName = "Pods-Population"
                ReferencedContainer = "container:Pods.xcodeproj">
