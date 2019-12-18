@@ -55,8 +55,6 @@ class ViewController: UIViewController {
                 humansLast.append(human)
             }
             
-            print("\(humans.last!) in \(i). generation")
-            
             oldGeneration = newGeneration
             newGeneration = newGeneration / 2 * numberChild
             human = oldGeneration + newGeneration
@@ -68,8 +66,6 @@ class ViewController: UIViewController {
                 humans.remove(at: 0)
             }
         }
-        
-        print(humansLast)
     }
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
@@ -79,11 +75,25 @@ class ViewController: UIViewController {
             alert.addAction(action)
             self.present(alert, animated: true)
         } else {
-            humans.removeAll()
-            humansLast.removeAll()
-            
-            start(number: Int(numberChildTextField.text!)!, population: Int(firstPopulationTextField.text!)!)
-            performSegue(withIdentifier: "toView", sender: nil)
+            if Int(numberChildTextField.text!)! > 15 {
+                let alert = UIAlertController(title: "Alert", message: "The child number cannot be greater than 15!", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Ok", style: .default)
+                alert.addAction(action)
+                self.present(alert, animated: true)
+            } else {
+                if Int(firstPopulationTextField.text!)! > 10000000000 {
+                    let alert = UIAlertController(title: "Alert", message: "The first population cannot be greater than 10000000000!", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "Ok", style: .default)
+                    alert.addAction(action)
+                    self.present(alert, animated: true)
+                } else {
+                    humans.removeAll()
+                    humansLast.removeAll()
+                    
+                    start(number: Int(numberChildTextField.text!)!, population: Int(firstPopulationTextField.text!)!)
+                    performSegue(withIdentifier: "toView", sender: nil)
+                }
+            }
         }
     }
     
