@@ -28,8 +28,8 @@ class ViewController: UIViewController {
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
-        toolBar.barTintColor = .black
-        toolBar.tintColor = .white
+        toolBar.barTintColor = UIColor(named: "Color2")
+        toolBar.tintColor = UIColor(named: "Color1")
 
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(ViewController.dismissKeyboard))
 
