@@ -19,8 +19,19 @@
 		3A9F10BC239BEB8A0022835D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F10BB239BEB8A0022835D /* README.md */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3A5BD42C23D764B900348433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A5BD42823D764B900348433 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 737244C3BA3D853B5F8946F50D38306B;
+			remoteInfo = "Pods-Population";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3A5BD42623D75E7300348433 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
+		3A5BD42823D764B900348433 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../../../../../.Trash/Pods.xcodeproj; sourceTree = "<group>"; };
 		3A7F9B7623A93762008D5665 /* AnalyzesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzesView.swift; sourceTree = "<group>"; };
 		3A9F109A239B81CD0022835D /* Population.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Population.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9F109D239B81CD0022835D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A5BD42923D764B900348433 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A5BD42D23D764B900348433 /* Pods_Population.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3A9F1091239B81CD0022835D = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +114,7 @@
 		95A1B4EFD96510B68858F6B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A5BD42823D764B900348433 /* Pods.xcodeproj */,
 				4B64597565BE61AD6980F648 /* Pods_Population.framework */,
 			);
 			name = Frameworks;
@@ -147,12 +167,28 @@
 			mainGroup = 3A9F1091239B81CD0022835D;
 			productRefGroup = 3A9F109B239B81CD0022835D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3A5BD42923D764B900348433 /* Products */;
+					ProjectRef = 3A5BD42823D764B900348433 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3A9F1099239B81CD0022835D /* Population */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3A5BD42D23D764B900348433 /* Pods_Population.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Population.framework;
+			remoteRef = 3A5BD42C23D764B900348433 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3A9F1098239B81CD0022835D /* Resources */ = {
@@ -344,14 +380,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = 84X92G2X4P;
 				INFOPLIST_FILE = Population/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = CanBalkaya.Population;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -365,14 +401,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = 84X92G2X4P;
 				INFOPLIST_FILE = Population/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = CanBalkaya.Population;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
