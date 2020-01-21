@@ -9,13 +9,6 @@
 import UIKit
 import SwiftUI
 
-var humans = [Int]()
-var humansLast = [Int]()
-var human = Int()
-var newGeneration = Int()
-var oldGeneration = Int()
-var adultPeople = Int()
-
 class ViewController: UIViewController {
     @IBOutlet weak var numberChildTextField: UITextField!
     @IBOutlet weak var firstPopulationTextField: UITextField!
