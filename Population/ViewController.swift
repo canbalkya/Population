@@ -63,19 +63,19 @@ class ViewController: UIViewController {
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         if numberChildTextField.text == "" && firstPopulationTextField.text == "" {
-            let alert = UIAlertController(title: "Alert", message: "Please, fill in all sections!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Fill sections", message: "Please, fill in all sections!", preferredStyle: .alert)
             let action = UIAlertAction(title: "Ok", style: .default)
             alert.addAction(action)
             self.present(alert, animated: true)
         } else {
             if Int(numberChildTextField.text!)! > 9 {
-                let alert = UIAlertController(title: "Alert", message: "The child number cannot be greater than 15!", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Child count is so big", message: "The child number cannot be greater than 9!", preferredStyle: .alert)
                 let action = UIAlertAction(title: "Ok", style: .default)
                 alert.addAction(action)
                 self.present(alert, animated: true)
             } else {
                 if Int(firstPopulationTextField.text!)! > 10000000000 {
-                    let alert = UIAlertController(title: "Alert", message: "The first population cannot be greater than 10000000000!", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Population is so big", message: "The first population cannot be greater than 10000000000!", preferredStyle: .alert)
                     let action = UIAlertAction(title: "Ok", style: .default)
                     alert.addAction(action)
                     self.present(alert, animated: true)
