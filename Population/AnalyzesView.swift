@@ -15,9 +15,15 @@ struct AnalyzesView: View {
             
             HStack (alignment: .top) {
                 VStack (alignment: .trailing, spacing: UIScreen.main.bounds.height * 0.12) {
-                    Text(String(humansLast.max()!)).font(.system(size: 8))
-                    Text(String((humansLast.max()! + humansLast.min()!)/2)).font(.system(size: 8))
-                    Text(String(humansLast.min()!)).font(.system(size: 8))
+                    if humansLast.max()! == humansLast.min()! {
+                        Text(String(humansLast.max()!)).font(.system(size: 8))
+                        Text(String((humansLast.max()!)/2)).font(.system(size: 8))
+                        Text(String("0")).font(.system(size: 8))
+                    } else {
+                        Text(String(humansLast.max()!)).font(.system(size: 8))
+                        Text(String((humansLast.max()! + humansLast.min()!)/2)).font(.system(size: 8))
+                        Text(String(humansLast.min()!)).font(.system(size: 8))
+                    }
                 }.frame(height: UIScreen.main.bounds.height * 0.3).padding(.top, 5)
                 
                 HStack (spacing: 8) {
