@@ -46,14 +46,25 @@ struct BarView: View {
     
     var body: some View {
         VStack {
-            ZStack (alignment: .bottom) {
-                Capsule().frame(width: UIScreen.main.bounds.width * 0.06, height: CGFloat(UIScreen.main.bounds.height * 0.3)).foregroundColor(Color(#colorLiteral(red: 0.3607843137, green: 0.3882352941, blue: 0.4039215686, alpha: 0.3004334332)))
-                Capsule().frame(width: UIScreen.main.bounds.width * 0.06, height: CGFloat((value * Int(UIScreen.main.bounds.height * 0.3))/humansLast.max()!)).foregroundColor(.green)
+            ZStack(alignment: .bottom) {
+                Capsule().frame(width: UIScreen.main.bounds.width * 0.06, height: CGFloat(UIScreen.main.bounds.height * 0.3))
+                    .foregroundColor(Color(#colorLiteral(red: 0.3607843137, green: 0.3882352941, blue: 0.4039215686, alpha: 0.3004334332)))
+                Capsule().frame(width: UIScreen.main.bounds.width * 0.06, height: CGFloat((value * Int(UIScreen.main.bounds.height * 0.3)) / getLastValue()))
+                    .foregroundColor(.green)
             }
             
-            Text(String(currentGeneration)).padding(.top, UIScreen.main.bounds.height * 0.001)
+            Text(String(currentGeneration))
+                .padding(.top, UIScreen.main.bounds.height * 0.001)
                 .animation(.default)
         }
+    }
+    
+    func getLastValue() -> Int {
+        if humansLast[0] == 0 {
+            return 1
+        }
+        
+        return humansLast.max()!
     }
 }
 
